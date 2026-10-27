@@ -1,0 +1,88 @@
+{
+  "hardware": "Apple M5 Pro",
+  "device": "mps",
+  "python": "3.11.16",
+  "torch": "2.14.1",
+  "ultralytics": "8.4.190",
+  "opencv": "5.0.0",
+  "note": "End-to-end pipeline (decode -> pose+ByteTrack -> logic -> render -> encode), PPE off. avg_fps includes model warm-up.",
+  "runs": {
+    "clip1": {
+      "frames": 421,
+      "device": "mps",
+      "pose_model": "weights/yolo11s-pose.pt",
+      "ppe": false,
+      "resolution": [
+        1280,
+        720
+      ],
+      "avg_fps": 48.32,
+      "ms_per_frame": {
+        "pose_track": 16.78,
+        "ppe": 0.0,
+        "logic": 0.05,
+        "render": 0.68
+      },
+      "events": {}
+    },
+    "clip2": {
+      "frames": 609,
+      "device": "mps",
+      "pose_model": "weights/yolo11s-pose.pt",
+      "ppe": false,
+      "resolution": [
+        1280,
+        720
+      ],
+      "avg_fps": 59.52,
+      "ms_per_frame": {
+        "pose_track": 13.11,
+        "ppe": 0.0,
+        "logic": 0.06,
+        "render": 1.12
+      },
+      "events": {
+        "ZONE_INTRUSION": 3
+      }
+    },
+    "clip3": {
+      "frames": 260,
+      "device": "mps",
+      "pose_model": "weights/yolo11s-pose.pt",
+      "ppe": false,
+      "resolution": [
+        1280,
+        720
+      ],
+      "avg_fps": 44.52,
+      "ms_per_frame": {
+        "pose_track": 18.28,
+        "ppe": 0.0,
+        "logic": 0.09,
+        "render": 0.86
+      },
+      "events": {}
+    },
+    "down": {
+      "frames": 470,
+      "device": "mps",
+      "pose_model": "weights/yolo11s-pose.pt",
+      "ppe": false,
+      "resolution": [
+        1366,
+        720
+      ],
+      "avg_fps": 56.2,
+      "ms_per_frame": {
+        "pose_track": 14.6,
+        "ppe": 0.0,
+        "logic": 0.03,
+        "render": 0.86
+      },
+      "events": {
+        "FALL": 1,
+        "MAN_DOWN": 1
+      }
+    }
+  }
+}

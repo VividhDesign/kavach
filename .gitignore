@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+weights/
+samples/*
+!samples/SOURCES.md
+outputs/
+runs/
+*.mp4
+*.pt
+*.onnx
+# private interview notes
+STUDY_GUIDE.md
+.DS_Store
+PLAN.md

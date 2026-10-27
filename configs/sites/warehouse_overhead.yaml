@@ -1,0 +1,9 @@
+# Overhead CCTV view of a warehouse aisle (samples/clip2.mp4). Coordinates are normalised (0-1).
+zones:
+  - name: walkway
+    type: walkway            # drawn for context; never alerts
+    points: [[0.45, 0.0], [0.75, 0.0], [0.72, 0.40], [0.45, 0.40]]
+  - name: forklift_lane
+    type: hazard
+    points: [[0.40, 0.45], [0.80, 0.45], [0.88, 0.85], [0.45, 0.85]]
+    min_dwell_frames: 8      # clip is 50 fps, so ~0.16 s
